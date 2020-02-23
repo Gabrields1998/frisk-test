@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="icon" 
+    type="image/png" 
+    href="logo.png">
+    <title><%= project_name %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102886917-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-102886917-3');
+    </script>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+      <a class="navbar-brand" href="<%= root_path %>"><img src="/logo.png" width="32px"/></a>
+      <a class="navbar-brand" href="<%= root_path %>"><%= project_name %></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="<%= root_path %>">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<%= faq_path %>">Faq</a>
+            </li><li class="nav-item">
+            <a class="nav-link" href="<%= tutorial_path %>">Tutorial</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+    
+      <div class="header clearfix">
+          
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <%= yield %>
+    </div>
+  </body>
+</html>
